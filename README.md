@@ -8,6 +8,8 @@ This project is the code companion to the Node-RED lab that can be found at [htt
 
 Deploy this application to IBM Bluemix.
 
+<a href="https://bluemix.net/deploy?repository=https://github.com/jeancarl/nodejs-weather-company-data" target="_blank"><img src="http://bluemix.net/deploy/button.png" alt="Bluemix button" /></a>
+
 ## Getting Started on localhost
 
 This application can also be run locally. Create a Weather Company Data for IBM Bluemix service, copy the username and password credentials into the app.js file, and run the application normally.
@@ -19,49 +21,49 @@ When the application has been deployed, a number of endpoints are made available
 ### Weather Alerts
 The Weather Company Data Alerts API returns active weather alert headlines that are related to severe thunderstorms, tornadoes, earthquakes, and floods. These APIs also return non-weather alerts such as child abduction alerts and law enforcement warnings. The first endpoint will list alert headlines for a specified state passed into the application via a URL query parameter. The second endpoint shows the alert details page, linked from the list generated from the first endpoint, and outputs a more detailed view of the alert.
 
-HTML: http://<<MY-APP>>.mybluemix.net/alerts?state=<<STATE>>
-JSON: http://<<MY-APP>>.mybluemix.net/alert?format=json&id=<<ID>>
-* Replace <<MY-APP>> with the host of the application you chose.
-* Replace <<STATE>> with the two-letter abbreviation for a state (such as CA for California, TX for Texas)
+HTML: http://&lt;&lt;MY-APP>>.mybluemix.net/alerts?state=&lt;&lt;STATE&gt;&gt;
+JSON: http://&lt;&lt;MY-APP>>.mybluemix.net/alert?format=json&id=&lt;&lt;ID>>
+* Replace &lt;&lt;MY-APP>> with the host of the application you chose.
+* Replace &lt;&lt;STATE>> with the two-letter abbreviation for a state (such as CA for California, TX for Texas)
 
-HTML: http://<<MY-APP>>.mybluemix.net/alert?id=<<ID>>
-JSON: http://<<MY-APP>>.mybluemix.net/alert?format=json&id=<<ID>>
-* Replace <<MY-APP>> with the host of the application you chose.
-* Replace <<ID>> with the alert ID from one of the weather alerts.
+HTML: http://&lt;&lt;MY-APP>>.mybluemix.net/alert?id=&lt;&lt;ID>>
+JSON: http://&lt;&lt;MY-APP>>.mybluemix.net/alert?format=json&id=&lt;&lt;ID>>
+* Replace &lt;&lt;MY-APP>> with the host of the application you chose.
+* Replace &lt;&lt;ID>> with the alert ID from one of the weather alerts.
 
 ### Current Weather Conditions
 The Weather Company Data for IBM Bluemix API offers a variety of weather attributes including: temperature, humidity, barometric pressure, rain and snowfall, and cloud cover. This endpoint takes a zip code input and displays the current weather observation for that location.
 
-HTML: http://<<MY-APP>>.mybluemix.net/conditions?zipcode=<<ZIP-CODE>>
-JSON: http://<<MY-APP>>.mybluemix.net/conditions?format=json&zipcode=<<ZIP-CODE>>
-* Replace <<MY-APP>> with the host of the application you chose.
-* Replace <<ZIP-CODE>> with the five-digit zip code of a location.
+HTML: http://&lt;&lt;MY-APP>>.mybluemix.net/conditions?zipcode=&lt;&lt;ZIP-CODE>>
+JSON: http://&lt;&lt;MY-APP>>.mybluemix.net/conditions?format=json&zipcode=&lt;&lt;ZIP-CODE>>
+* Replace &lt;&lt;MY-APP>> with the host of the application you chose.
+* Replace &lt;&lt;ZIP-CODE>> with the five-digit zip code of a location.
 
 ### Daily Forecast
 The Weather Company Data for IBM Bluemix API offers a daily forecast API that can contain up to ten days of daily forecasts for each location. Each day of a forecast can contain up to three separate forecasts. For any given forecast day the API can return day, night, and 24-hour forecasts. This endpoint takes a zip code input and displays the ten-day forecast. You can also choose to use the three-, five-, or seven-day API endpoint for a fewer number of days.
 
-HTML: http://<<MY-APP>>.mybluemix.net/forecast?zipcode=<<ZIP-CODE>>
-JSON: http://<<MY-APP>>.mybluemix.net/forecast?format=json&zipcode=<<ZIP-CODE>>
-* Replace <<MY-APP>> with the host of the application you chose.
-* Replace <<ZIP-CODE>> with the five-digit zip code of a location
+HTML: http://&lt;&lt;MY-APP>>.mybluemix.net/forecast?zipcode=&lt;&lt;ZIP-CODE>>
+JSON: http://&lt;&lt;MY-APP>>.mybluemix.net/forecast?format=json&zipcode=&lt;&lt;ZIP-CODE>>
+* Replace &lt;&lt;MY-APP>> with the host of the application you chose.
+* Replace &lt;&lt;ZIP-CODE>> with the five-digit zip code of a location
 
 ### Time Series
 The Weather Company Data for IBM Bluemix API offers a time series API that returns past observations that occurred up to and including the last 24 hours for the location requested. The recent observations data is continuously updated and replaced with a first-in/first-out methodology (rotating data with newest observation and moving the oldest observations to the archive storage) based on date/time stamping of the observations. The amount of data that is retained and available from any station can be more than 24 individual observation reports. The number of observations is determined by the type of observation it is.
 
-HTML: http://<<MY-APP>>.mybluemix.net/timeseries?zipcode=<<ZIP-CODE>>&hours=<<HOURS>>
-JSON: http://<<MY-APP>>.mybluemix.net/timeseries?format=json&zipcode=<<ZIP-CODE>>&hours=<<HOURS>>
-* Replace <<MY-APP>> with the host of the application you chose.
-* Replace <<ZIP-CODE>> with the five-digit zip code of a location
-* Replace <<HOURS>> with the number of hours of results to be returned (0-23)
+HTML: http://&lt;&lt;MY-APP>>.mybluemix.net/timeseries?zipcode=&lt;&lt;ZIP-CODE>>&hours=&lt;&lt;HOURS>>
+JSON: http://&lt;&lt;MY-APP>>.mybluemix.net/timeseries?format=json&zipcode=&lt;&lt;ZIP-CODE>>&hours=&lt;&lt;HOURS>>
+* Replace &lt;&lt;MY-APP>> with the host of the application you chose.
+* Replace &lt;&lt;ZIP-CODE>> with the five-digit zip code of a location
+* Replace &lt;&lt;HOURS>> with the number of hours of results to be returned (0-23)
 
 ### Almanac
 The Weather Company Data for IBM Bluemix API offers an almanac API that returns the daily almanac for the location identified by location. The almanac information for this API is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). This endpoint returns the weather almanac data for a period of dates and see min/max temperatures and the years they occurred, average and mean temperatures, and amounts of precipitation and snowfall.
 
-HTML: http://<<MY-APP>>.mybluemix.net/almanac?zipcode=<<ZIP-CODE>>&start=<<MMDD>>&end=<<MMDD>>
-JSON: http://<<MY-APP>>.mybluemix.net/almanac?format=json&zipcode=<<ZIP-CODE>>&start=<<MMDD>>&end=<<MMDD>>
-* Replace <<MY-APP>> with the host of the application you chose.
-* Replace <<ZIP-CODE>> with the five-digit zip code of a location.
-* Replace <<MMDD>> with the start and end dates in the two-digit month (single digit months should be preceded by a zero), two digit day format. March 14th would be 0314.
+HTML: http://&lt;&lt;MY-APP>>.mybluemix.net/almanac?zipcode=&lt;&lt;ZIP-CODE>>&start=&lt;&lt;MMDD>>&end=&lt;&lt;MMDD>>
+JSON: http://&lt;&lt;MY-APP>>.mybluemix.net/almanac?format=json&zipcode=&lt;&lt;ZIP-CODE>>&start=&lt;&lt;MMDD>>&end=&lt;&lt;MMDD>>
+* Replace &lt;&lt;MY-APP>> with the host of the application you chose.
+* Replace &lt;&lt;ZIP-CODE>> with the five-digit zip code of a location.
+* Replace &lt;&lt;MMDD>> with the start and end dates in the two-digit month (single digit months should be preceded by a zero), two digit day format. March 14th would be 0314.
 
 ## HTML Templates
 
