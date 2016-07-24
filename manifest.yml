@@ -1,0 +1,11 @@
+---
+applications:
+- name: weather-company-data-demo
+  host: weathercompanydatademo
+  memory: 128M
+  services:
+  - weatherinsights
+declared-services:
+  weatherinsights:
+    label: weatherinsights
+    plan: Free-v2
