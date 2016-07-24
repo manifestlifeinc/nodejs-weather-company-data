@@ -76,4 +76,4 @@ HTML templates used to display results are provided in the following files:
 
 ## License
 
-This code is licensed under Apache 2.0. Full license text is available in [LICENSE](https://github.com/jeancarl/node-red-labs/tree/master/node-red-weather-company-data/LICENSE).
+This code is licensed under Apache 2.0. Full license text is available in [LICENSE](https://github.com/jeancarl/nodejs-weather-company-data/tree/master/LICENSE).
