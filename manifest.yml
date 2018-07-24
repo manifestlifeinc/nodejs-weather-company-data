@@ -1,11 +1,7 @@
 ---
 applications:
-- name: weather-company-data-demo
-  host: weathercompanydatademo
+- name: callforcode-weather-company-api-demo
+  host: callforcodeweathercompanyapidemo
   memory: 128M
-  services:
-  - weatherinsights
-declared-services:
-  weatherinsights:
-    label: weatherinsights
-    plan: Free-v2
+  env:
+    WEATHER_API_KEY: insertapikeyhere
